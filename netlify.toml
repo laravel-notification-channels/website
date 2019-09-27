@@ -1,0 +1,5 @@
+[build]
+
+command = "gulp"
+publish = "public"
+environment = { PHP_VERSION = "7.2" }
