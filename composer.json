@@ -1,0 +1,16 @@
+{
+  "name": "themsaid/katana",
+  "description": "A neat static site & blog generator with markdown support.",
+  "keywords": ["flat-file","cms","static","site","generator","markdown","blade"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mohamed Said",
+      "email": "themohamedsaid@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">7.2",
+    "themsaid/katana-core": "1.*"
+  }
+}

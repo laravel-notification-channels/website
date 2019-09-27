@@ -1,0 +1,154 @@
+html {
+  font: 62.5%/1.65 "Open Sans", sans-serif;
+  box-sizing: content-box;
+}
+body {
+  font-size: 1.3rem;
+  line-height: 22px;
+  color: #4e4e4e;
+}
+a {
+  color: #0AB5A5;
+  text-decoration: none;
+}
+a:hover {
+  color: #08887c;
+  text-decoration: none;
+}
+h1 {
+  line-height: 30px;
+  margin: 30px 0;
+}
+h2 {
+  font-weight: 400;
+  font-size: 25px;
+  margin: 60px 0 25px;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+#header {
+  padding: 20px 0;
+  border-bottom: solid 6px #0AB5A5;
+  background: url("../noisy_net.png");
+  margin-bottom: 60px;
+}
+#header img {
+  display: inline-block;
+  height: 40px;
+}
+#header h1 {
+  display: inline-block;
+  line-height: 40px;
+  margin: 0 0 0 30px;
+  vertical-align: middle;
+  font-size: 23px;
+}
+#header h1 a {
+  color: #16d19c !important;
+}
+#header .buttons a {
+  line-height: 38px;
+  vertical-align: middle;
+  margin-left: 31px;
+}
+.menu-label {
+  margin-top: 30px;
+  border-bottom: dashed 1px #e1e1e1;
+}
+.menu-list {
+  padding: 0;
+  list-style: none;
+}
+.realContent {
+  border-left: dashed 1px #e1e1e1;
+}
+@media (min-width: 1200px) {
+  .realContent {
+    padding: 0 130px;
+  }
+}
+.realContent .options {
+  margin-bottom: 50px;
+}
+.realContent h1:first-of-type {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 60px;
+}
+.realContent h3 {
+  margin: 55px 0 20px;
+  font-weight: 200;
+}
+.realContent h2 {
+  font-weight: 200;
+  font-size: 35px;
+  padding-top: 50px;
+  border-top: solid 1px #e7e7e7;
+}
+code {
+  font-size: 1.2rem !important;
+}
+.alert {
+  border-radius: 0;
+  border: none;
+}
+.alert-danger {
+  background-color: #fddddd;
+  color: #933432;
+}
+.alert-warning {
+  background-color: #fef6dd;
+  color: #957d32;
+}
+.alert-success {
+  background-color: #cff5f2;
+  color: #0a7c71;
+}
+.alert-info {
+  background-color: #daeffd;
+  color: #2b6a94;
+}
+footer {
+  border-top: solid 3px #f2f2f2;
+  margin-top: 40px;
+  text-align: center;
+  background: #f9f9f9;
+  padding: 30px;
+}
+.wow {
+  padding: 40px 0;
+  background: url("../noisy_net.png");
+  margin-bottom: 60px;
+  color: #16d19c;
+  text-align: center;
+}
+.wow img {
+  max-width: 130px;
+}
+.wow h1 {
+  font-weight: 200;
+  margin: 40px 0 20px;
+}
+.wow h2 {
+  color: #dcdcdc;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  margin: 10px 0 40px;
+}
+.wow i {
+  color: #fff;
+}
+.wow a {
+  color: #86bbba;
+}
+
+/*# sourceMappingURL=all.css.map */
