@@ -12,6 +12,7 @@
     <li><a href="@url('/pusher-push-notifications')">Pusher Push Notifications</a></li>
     <li><a href="@url('/webpush')">WebPush</a></li>
     <li><a href="@url('/pushwoosh')">Pushwoosh</a></li>
+    <li><a href="@url('/vwo-engage')">VWO Engage</a></li>
 </ul>
 
 <p class="menu-label">Messenger / Chat / Social</p>
@@ -19,9 +20,16 @@
     <li><a href="@url('/bearychat')">BearyChat</a></li>
     <li><a href="@url('/discord')">Discord</a></li>
     <li><a href="@url('/facebook')">Facebook</a></li>
+    <li><a href="@url('/facebook-poster')">Facebook Page Poster</a></li>
     <li><a href="@url('/gitter')">Gitter</a></li>
     <li><a href="@url('/twitter')">Twitter</a></li>
     <li><a href="@url('/telegram')">Telegram</a></li>
+</ul>
+
+<p class="menu-label">Support</p>
+<ul class="menu-list">
+    <li><a href="@url('/pagerduty')">Pagerduty</a></li>
+    <li><a href="@url('/intercom')">Intercom</a></li>
 </ul>
 
 <p class="menu-label">SMS</p>
@@ -37,6 +45,7 @@
     <li><a href="@url('/authy')">Authy</a></li>
     <li><a href="@url('/cmsms')">CMSMS</a></li>
     <li><a href="@url('/sms-broadcast')">SMSbroadcast</a></li>
+    <li><a href="@url('/46elks')">46Elks</a></li>
 </ul>
 
 <p class="menu-label">To-do Lists</p>
@@ -44,13 +53,12 @@
   <li><a href="@url('/evernote')">Evernote</a></li>
   <li><a href="@url('/todoist')">Todoist</a></li>
   <li><a href="@url('/wunderlist')">Wunderlist</a></li>
+  <li><a href="@url('/trello')">Trello</a></li>
 </ul>
 
 <p class="menu-label">Misc.</p>
 <ul class="menu-list">
     <li><a href="@url('/lob')">Lob Physical Mail</a></li>
-    <li><a href="@url('/pagerduty')">Pagerduty</a></li>
-    <li><a href="@url('/trello')">Trello</a></li>
     <li><a href="@url('/webhook')">Webhook</a></li>
 </ul>
 
