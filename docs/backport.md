@@ -1,6 +1,5 @@
 ---
-view::extends: _includes.base
-view::yields: body
+permalink: /backport
 ---
 
 # Usage for Laravel 5.1 and 5.2

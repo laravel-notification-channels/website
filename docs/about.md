@@ -1,6 +1,5 @@
 ---
-view::extends: _includes.base
-view::yields: body
+permalink: /about/
 ---
 
 # Contribution
