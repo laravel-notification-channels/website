@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /logo.svg
 heroText: Laravel Notification Channels
 tagline: A collection of custom notification drivers for Laravel
 actionText: Browse Channels →
@@ -10,6 +10,10 @@ actionLink: /about/
 <style>
 .hero .description {
     max-width:40rem !important
+}
+
+.hero img {
+    height: 10em;
 }
 
 .maintain {
