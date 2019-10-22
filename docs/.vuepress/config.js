@@ -16,6 +16,7 @@ module.exports = {
   dest: './dist',
 
   themeConfig: {
+    channelCount: categories.reduce((count, cat) => count + cat.channels.length, 0),
     sidebarDepth: 1,
     nav: [
       { text: 'About / FAQ', link: '/about' },

@@ -1,13 +1,33 @@
 # Laravel Notification Channels Website
 
-TODO update this
+Our site is built with [Vuepress](https://vuepress.vuejs.org/). 
+
 
 ## Building
-The site uses [Katana](http://themsaid.github.io/katana/).
 
+```bash
+yarn dev # Run developmnent server
+yarn built # Build the static site
 ```
-php katana build
+
+## Adding new Channels
+
+Open `channels.js` and add your channel to the correct category. The slug should be set as the github repository name.
+
+This will add the channel to the sidebar, and pull in the `README.md` from the repository during the build. 
+
+```js
+...
+
+name: 'Support', channels: [
+      { slug: 'pagerduty', name: 'Pagerduty' },
+      { slug: 'intercom', name: 'Intercom' },
+      { slug: 'new-channel', name: 'My New Channel' },
+    ],
+
+...
 ```
+
 
 ## Deploying
 This website is deployed automatically using [Netlify](https://app.netlify.com).

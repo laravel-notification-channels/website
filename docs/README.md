@@ -13,7 +13,7 @@ actionLink: /about/
     <p>Minimal setup with quick integration helps you focus on developing your newest product.</p>
   </div>
   <div class="feature">
-    <h2>20+ Ready to use Channels</h2>
+    <h2>{{ $themeConfig.channelCount }} ready to use channels</h2>
     <p>We've got channels for most of the popular services you use ready to go. Just pull in the channel, configure your keys & start sending notifications</p>
   </div>
   <div class="feature">
@@ -24,4 +24,4 @@ actionLink: /about/
 
 <div class="footer">
     MIT Licensed | Copyright © {{ (new Date).getFullYear() }} | <a href="https://github.com/orgs/laravel-notification-channels/people">Contributors</a>
-  </div>
+</div>
