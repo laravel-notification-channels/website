@@ -126,6 +126,9 @@ If the project maintainer has any additional requirements, you will find them li
 
 ## Branding
 
+The logo was designed by [irazasyed](https://github.com/irazasyed)  
+You can find high quality SVG & PNG versions below.
+
 | Type | Preview                             | Download Link                                                                                                                                                  |
 |------|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PNG  | <img src="/logo.png" height="120"> | [Laravel-Notification-Channels-Logo.png](https://github.com/laravel-notification-channels/website/blob/master/branding/Laravel-Notification-Channels-Logo.png) |
