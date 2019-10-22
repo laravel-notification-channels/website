@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /logo.svg
 heroText: Laravel Notification Channels
 tagline: A collection of custom notification drivers for Laravel
 actionText: Browse Channels →
