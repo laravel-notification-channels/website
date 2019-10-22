@@ -2,15 +2,37 @@
 permalink: /about/
 ---
 
-# Contributing
+# Laravel Notification Channels
+
+We aim to provide a curated selection of notification channels for use in your Laravel applications.
+Please use the sidebar on the left to find the appropriate package for you needs. If we don't have a package for your
+desired service yet, read on for instructions on how to contribute! 
+
+## Suggesting a new Channel
+
+Please create an issue in the [channels repo](https://github.com/laravel-notification-channels/channels) for your
+suggestion. Include links to the API documentation and provider's site.
+
+## Contributing
 
 If you'd like to add a custom driver to the list, please download our [skeleton repo](https://github.com/laravel-notification-channels/skeleton), and open a new Pull Request on our [channels repo](https://github.com/laravel-notification-channels/channels).
 
 Contributions are **welcome** and will be fully **credited**.
 
-Please read and understand the contribution guide before creating an issue or pull request.
+Please read and understand the FAQ below before creating an issue or pull request.
 
 ## FAQ
+
+### How can I get support?
+
+If you need help with anything, you can create an issue on github. If the issue relates to a specific channel, 
+you should create the issue it that repository. There's a link at the top of each documentation page to the channel's
+github repository. A list of [all the repos can be found here](https://github.com/laravel-notification-channels?type=source).
+
+If you have questions about the project in general, please create an issue in the [channels repo](https://github.com/laravel-notification-channels/channels)
+
+If you have found a security issue in one of the channels, try to contact the maintainer using the email in the channel's
+readme. If you can't get in contact with them, please email [atymicq@gmail.com](mailto:atymicq@gmail.com) and I'll address the issue.
 
 ### Who owns the work?
 
@@ -24,11 +46,11 @@ Please read and understand the contribution guide before creating an issue or pu
 
 ### What level of access is given?
 
- Admin Rights
+ Admin Rights & membership of the github organisation.
 
 ### What happens to the package, if the author decides to abandon or quit?
 
- Probably we, as a community, will step in until we find a replacement.
+ We, as a community, will step in until we find a replacement.
 
 ### What rights are being taken away from the author automatically?
 
@@ -41,13 +63,6 @@ Please read and understand the contribution guide before creating an issue or pu
 ### Who decides who can be part of the package as a collaborator?
 
  As an admin, package maintainers can choose their own collaborators.
-
-### Things you should be knowing:
-
- If you need help with anything, you can create an issue on github. If the issue relates to a specific channel, you
- should create the issue it that repository. A list of [all the channel repos is here](https://github.com/laravel-notification-channels?type=source).
- 
- If you have questions about the project in general, please create an issue in the [website repo](https://github.com/laravel-notification-channels/laravel-notification-channels.github.io)
 
 ### What are the rules?
 

@@ -34,7 +34,7 @@ module.exports = {
         title: 'Documentation',
         collapsable: false,
         children: [
-          ['/about', 'Contributing'],
+          ['/about', 'About / FAQ'],
           ['/backport', 'Using on Laravel 5.1 / 5.2'],
         ]
       }
@@ -97,9 +97,11 @@ This channel is deprecated. Please the [GitHub Repo](https://github.com/laravel-
     ['link', { rel: 'msapplication-TileColor', href: '#ffffff' }],
     ['link', { rel: 'msapplication-TileImage', href: '/icons/ms-icon-144x144.png' }],
     ['link', { rel: 'theme-color', href: '#ffffff' }],
-    ['style', {}, '.hero .description {max-width:40rem !important}']
+    ['style', {}, 'img + .icon.outbound {display: none;}']
   ],
   extraWatchFiles: [
     '../../channels.js'
   ]
 }
+
+

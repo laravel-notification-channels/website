@@ -7,6 +7,18 @@ actionText: Browse Channels →
 actionLink: /about/
 ---
 
+<style>
+.hero .description {
+    max-width:40rem !important
+}
+
+.maintain {
+    display: block;
+    margin-top: 0.3em;
+    color: #989898;
+}
+</style>
+
 <div class="features">
   <div class="feature">
     <h2>Simplicity First</h2>
@@ -24,4 +36,5 @@ actionLink: /about/
 
 <div class="footer">
     MIT Licensed | Copyright © {{ (new Date).getFullYear() }} | <a href="https://github.com/orgs/laravel-notification-channels/people">Contributors</a>
+    <small class="maintain">Maintained by <a href="https://atymic.dev">atymic</a></small>
 </div>
