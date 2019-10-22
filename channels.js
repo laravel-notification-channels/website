@@ -41,6 +41,7 @@ module.exports = [
       { slug: 'cmsms', name: 'CMSMS' },
       { slug: 'sms-broadcast', name: 'SMSbroadcast' },
       { slug: '46elks', name: '46Elks' },
+      { slug: 'sipgate', name: 'Sipgate' },
     ],
   },
   {
