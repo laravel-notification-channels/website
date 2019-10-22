@@ -1,5 +1,1 @@
-/vendor
-/_cache
-/node_modules
-.DS_Store
-composer.lock
+docs/.vuepress/dist
