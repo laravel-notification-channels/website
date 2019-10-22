@@ -12,6 +12,10 @@ actionLink: /about/
     max-width:40rem !important
 }
 
+.hero img {
+    height: 10em;
+}
+
 .maintain {
     display: block;
     margin-top: 0.3em;
