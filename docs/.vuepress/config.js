@@ -101,6 +101,14 @@ This channel is deprecated. Please the [GitHub Repo](https://github.com/laravel-
   ],
   extraWatchFiles: [
     '../../channels.js'
+  ],
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-150688103-1'
+      }
+    ]
   ]
 }
 
