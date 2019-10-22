@@ -1,72 +1,14 @@
-const categories = [
-  {
-    name: 'Push / Webpush', channels: [
-      { slug: 'apn', name: 'APN' },
-      { slug: 'onesignal', name: 'OneSignal' },
-      { slug: 'pushover', name: 'Pushover' },
-      { slug: 'pushbullet', name: 'PushBullet' },
-      { slug: 'pusher-push-notifications', name: 'Pusher Push Notifications' },
-      { slug: 'webpush', name: 'WebPush' },
-      { slug: 'pushwoosh', name: 'Pushwoosh' },
-      { slug: 'vwo-engage', name: 'VWO Engage' },
-    ],
-  },
-  {
-    name: 'Messenger / Chat / Social', channels: [
-      { slug: 'bearychat', name: 'BearyChat' },
-      { slug: 'discord', name: 'Discord' },
-      { slug: 'facebook', name: 'Facebook' },
-      { slug: 'facebook-poster', name: 'Facebook Page Poster' },
-      { slug: 'gitter', name: 'Gitter' },
-      { slug: 'twitter', name: 'Twitter' },
-      { slug: 'telegram', name: 'Telegram' },
-    ],
-  },
-  {
-    name: 'Support', channels: [
-      { slug: 'pagerduty', name: 'Pagerduty' },
-      { slug: 'intercom', name: 'Intercom' },
-    ],
-  },
-  {
-    name: 'SMS / Voip', channels: [
-      { slug: 'clickatell', name: 'Clickatell' },
-      { slug: 'gammu', name: 'Gammu' },
-      { slug: 'jusibe', name: 'Jusibe' },
-      { slug: 'messagebird', name: 'Messagebird' },
-      { slug: 'ovh-sms', name: 'OVH SMS' },
-      { slug: 'plivo', name: 'Plivo' },
-      { slug: 'smsc-ru', name: 'Smsc.ru' },
-      { slug: 'twilio', name: 'Twilio' },
-      { slug: 'authy', name: 'Authy' },
-      { slug: 'cmsms', name: 'CMSMS' },
-      { slug: 'sms-broadcast', name: 'SMSbroadcast' },
-      { slug: '46elks', name: '46Elks' },
-    ],
-  },
-  {
-    name: 'To-do Lists', channels: [
-      { slug: 'evernote', name: 'Evernote' },
-      { slug: 'todoist', name: 'Todoist' },
-      { slug: 'wunderlist', name: 'Wunderlist' },
-      { slug: 'trello', name: 'Trello' },
-    ],
-  },
-  {
-    name: 'Misc', channels: [
-      { slug: 'lob', name: 'Lob Physical Mail' },
-      { slug: 'webhook', name: 'Webhook' },
-    ],
-  },
-  {
-    name: 'Deprecated', collapsable: true, channels: [
-      { slug: 'hipchat', name: 'HipChat' },
-      { slug: 'gcm', name: 'GCM Notifications' },
-      { slug: 'maillift', name: 'MailLift' },
-      { slug: 'ionic-push-notifications', name: 'Ionic Push Notifications' },
-    ],
-  },
-]
+const categories = require('../../channels')
+
+const generatedSidebar = categories.map(cat => {
+  return {
+    title: cat.name,
+    collapsable: cat.collapsable || false,
+    children: cat.channels.map(c => {
+      return [`/${c.slug}/`, c.name]
+    }),
+  }
+})
 
 module.exports = {
   title: 'Laravel Notification Channels',
@@ -86,21 +28,23 @@ module.exports = {
         link: 'https://packagist.org/packages/laravel-notification-channels/',
       },
     ],
-    sidebar: categories.map(cat => {
-      return {
-        title: cat.name,
-        collapsable: cat.collapsable || false,
-        children: cat.channels.map(c => {
-          return [`/${c.slug}/`, c.name]
-        }),
+    sidebar: [
+      {
+        title: 'Documentation',
+        collapsable: false,
+        children: [
+          ['/about', 'Contributing'],
+          ['/backport', 'Using on Laravel 5.1 / 5.2'],
+        ]
       }
-    }),
+    ].concat(generatedSidebar),
   },
   async additionalPages () {
     let allChannels = []
 
     categories.map(cat => {
       cat.channels.map(c => {
+        if (cat.name === 'Deprecated') c.deprecated = true;
         allChannels.push(c)
       })
     })
@@ -115,13 +59,46 @@ module.exports = {
         const res = await axios.get(`https://raw.githubusercontent.com/laravel-notification-channels/${channel.slug}/master/README.md`)
         console.log(`Fetched readme for ${channel.slug}`)
 
+        let content = res.data;
+
+        content = `<GithubButton slug="${channel.slug}"></GithubButton>\n` + content
+
+        if (channel.deprecated) {
+          content = `::: danger
+This channel is deprecated. Please the [GitHub Repo](https://github.com/laravel-notification-channels/${channel.slug}) for more information
+:::\n` + content
+        }
+
         global['REPO_CACHE'][channel.slug] = {
           path: `/${channel.slug}/`,
-          content: res.data,
+          content,
         }
       }
 
       return global['REPO_CACHE'][channel.slug]
     })
   },
+  head: [
+    ['link', { rel: 'apple-touch-icon', sizes: '57x57', href: '/icons/apple-icon-57x57.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '60x60', href: '/icons/apple-icon-60x60.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '72x72', href: '/icons/apple-icon-72x72.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '76x76', href: '/icons/apple-icon-76x76.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '114x114', href: '/icons/apple-icon-114x114.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '120x120', href: '/icons/apple-icon-120x120.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '144x144', href: '/icons/apple-icon-144x144.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '152x152', href: '/icons/apple-icon-152x152.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/icons/apple-icon-180x180.png' }],
+    ['link', { rel: 'icon" type="image/png', sizes: '192x192', href: '/icons/android-icon-192x192.png' }],
+    ['link', { rel: 'icon" type="image/png', sizes: '32x32', href: '/icons/favicon-32x32.png' }],
+    ['link', { rel: 'icon" type="image/png', sizes: '96x96', href: '/icons/favicon-96x96.png' }],
+    ['link', { rel: 'icon" type="image/png', sizes: '16x16', href: '/icons/favicon-16x16.png' }],
+    ['link', { rel: 'manifest', href: '/icons/manifest.json' }],
+    ['link', { rel: 'msapplication-TileColor', href: '#ffffff' }],
+    ['link', { rel: 'msapplication-TileImage', href: '/icons/ms-icon-144x144.png' }],
+    ['link', { rel: 'theme-color', href: '#ffffff' }],
+    ['style', {}, '.hero .description {max-width:40rem !important}']
+  ],
+  extraWatchFiles: [
+    '../../channels.js'
+  ]
 }

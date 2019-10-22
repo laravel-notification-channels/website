@@ -1,15 +1,27 @@
 ---
 home: true
+heroImage: /logo.png
 heroText: Laravel Notification Channels
-tagline: A collection of custom drivers for Laravel
-actionText: Get Started →
+tagline: A collection of custom notification drivers for Laravel
+actionText: Browse Channels →
 actionLink: /about/
-features:
-- title: Simplicity First
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: Vue-Powered
-  details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-- title: Performant
-  details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-footer: MIT Licensed | Copyright © 2019
 ---
+
+<div class="features">
+  <div class="feature">
+    <h2>Simplicity First</h2>
+    <p>Minimal setup with quick integration helps you focus on developing your newest product.</p>
+  </div>
+  <div class="feature">
+    <h2>20+ Ready to use Channels</h2>
+    <p>We've got channels for most of the popular services you use ready to go. Just pull in the channel, configure your keys & start sending notifications</p>
+  </div>
+  <div class="feature">
+    <h2>Community Powered</h2>
+    <p>Channels are built and maintained by the community. Want to add a channel you use? Make a suggestion or add your channel on <a href="https://github.com/laravel-notification-channels/channels">channels repo</a>.</p>
+  </div>
+</div>
+
+<div class="footer">
+    MIT Licensed | Copyright © {{ (new Date).getFullYear() }} | <a href="https://github.com/orgs/laravel-notification-channels/people">Contributors</a>
+  </div>

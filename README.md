@@ -12,7 +12,7 @@ php katana build
 ## Deploying
 This website is deployed automatically using [Netlify](https://app.netlify.com).
    
-Branch previews are build for each deploy.
+Branch previews are build for each PR.
 
 ## Contribution
 

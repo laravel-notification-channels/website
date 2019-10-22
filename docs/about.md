@@ -2,9 +2,9 @@
 permalink: /about/
 ---
 
-# Contribution
+# Contributing
 
-If you'd like to add a custom driver to the list, please download our [skeleton repo](https://github.com/laravel-notification-channels/skeleton), and open a new Pull Request on our [new channels repo](https://github.com/laravel-notification-channels/new-channels).
+If you'd like to add a custom driver to the list, please download our [skeleton repo](https://github.com/laravel-notification-channels/skeleton), and open a new Pull Request on our [channels repo](https://github.com/laravel-notification-channels/channels).
 
 Contributions are **welcome** and will be fully **credited**.
 
@@ -17,6 +17,8 @@ Please read and understand the contribution guide before creating an issue or pu
  It is up to the package author to maintain the repository after it has been released.
 
  You'll be given **admin rights** to your repo. So you are in total control. Only if you ever do something like breaking semver we'll step in.
+ 
+ You'll also be added to the Laravel Notification Channels github organization (which shows up on your github profile).
 
  If some problems should arise you're always free to copy over the code to your own repo and abandon the one in our organization.
 
