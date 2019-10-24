@@ -66,7 +66,7 @@ module.exports = {
 
         if (channel.deprecated) {
           content = `::: danger
-This channel is deprecated. Please the [GitHub Repo](https://github.com/laravel-notification-channels/${channel.slug}) for more information
+This channel is deprecated. Please see the [GitHub Repo](https://github.com/laravel-notification-channels/${channel.slug}) for more information
 :::\n` + content
         }
 
