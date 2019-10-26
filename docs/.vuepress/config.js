@@ -16,6 +16,10 @@ module.exports = {
   dest: './dist',
 
   themeConfig: {
+    algolia: {
+      apiKey: '662d6a5e1b798d17b5eaaeb770b415e7',
+      indexName: 'laravel-notification-channels'
+    },
     channelCount: categories.reduce((count, cat) => count + cat.channels.length, 0),
     sidebarDepth: 1,
     nav: [
