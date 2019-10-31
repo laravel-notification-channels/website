@@ -42,6 +42,7 @@ module.exports = [
       { slug: 'sms-broadcast', name: 'SMSbroadcast' },
       { slug: '46elks', name: '46Elks' },
       { slug: 'sipgate', name: 'Sipgate' },
+      { slug: 'all-my-sms', name: 'AllMySms' },
     ],
   },
   {
