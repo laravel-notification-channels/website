@@ -1,58 +1,154 @@
 module.exports = [
   {
     name: 'Push / Webpush', channels: [
-      { slug: 'apn', name: 'APN' },
-      { slug: 'onesignal', name: 'OneSignal' },
-      { slug: 'pushover', name: 'Pushover' },
-      { slug: 'pushbullet', name: 'PushBullet' },
-      { slug: 'pusher-push-notifications', name: 'Pusher Push Notifications' },
-      { slug: 'webpush', name: 'WebPush' },
-      { slug: 'pushwoosh', name: 'Pushwoosh' },
-      { slug: 'vwo-engage', name: 'VWO Engage' },
+      {
+        slug: 'apn', name: 'APN',
+        maintainers: ['barryvdh', 'dwightwatson'],
+      },
+      {
+        slug: 'onesignal', name: 'OneSignal',
+        maintainers: ['LKaemmerling', 'Lloople'],
+      },
+      {
+        slug: 'pushover', name: 'Pushover',
+        maintainers: ['casperboone'],
+      },
+      {
+        slug: 'pushbullet', name: 'PushBullet',
+        maintainers: ['atymic', 'alexsoft'],
+      },
+      {
+        slug: 'pusher-push-notifications', name: 'Pusher Push Notifications',
+        maintainers: ['atymic'],
+      },
+      {
+        slug: 'webpush', name: 'WebPush',
+        maintainers: ['cretueusebiu'],
+      },
+      {
+        slug: 'pushwoosh', name: 'Pushwoosh',
+        maintainers: ['axlon'],
+      },
+      {
+        slug: 'vwo-engage', name: 'VWO Engage',
+        maintainers: ['billmn'],
+      },
     ],
   },
   {
     name: 'Messenger / Chat / Social', channels: [
-      { slug: 'bearychat', name: 'BearyChat' },
-      { slug: 'discord', name: 'Discord' },
-      { slug: 'facebook', name: 'Facebook' },
-      { slug: 'facebook-poster', name: 'Facebook Page Poster' },
-      { slug: 'gitter', name: 'Gitter' },
-      { slug: 'twitter', name: 'Twitter' },
-      { slug: 'telegram', name: 'Telegram' },
+      {
+        slug: 'bearychat', name: 'BearyChat',
+        maintainers: ['ElfSundae'],
+      },
+      {
+        slug: 'discord', name: 'Discord',
+        maintainers: ['codyphobe', 'arcdigital'],
+      },
+      {
+        slug: 'facebook', name: 'Facebook',
+        maintainers: ['irazasyed'],
+      },
+      {
+        slug: 'facebook-poster', name: 'Facebook Page Poster',
+        maintainers: ['dwightwatson'],
+      },
+      {
+        slug: 'gitter', name: 'Gitter',
+        maintainers: ['jhaoda'],
+      },
+      {
+        slug: 'twitter', name: 'Twitter',
+        maintainers: ['christophrumpel'],
+      },
+      {
+        slug: 'telegram', name: 'Telegram',
+        maintainers: ['irazasyed'],
+      },
     ],
   },
   {
     name: 'Support', channels: [
-      { slug: 'pagerduty', name: 'Pagerduty' },
-      { slug: 'intercom', name: 'Intercom' },
+      {
+        slug: 'pagerduty', name: 'Pagerduty',
+        maintainers: ['atymic'],
+      },
+      {
+        slug: 'intercom', name: 'Intercom',
+        maintainers: ['ftw-soft'],
+      },
     ],
   },
   {
     name: 'SMS / Voip', channels: [
-      { slug: 'clickatell', name: 'Clickatell' },
-      { slug: 'jusibe', name: 'Jusibe' },
-      { slug: 'messagebird', name: 'Messagebird' },
-      { slug: 'plivo', name: 'Plivo' },
-      { slug: 'smsc-ru', name: 'Smsc.ru' },
-      { slug: 'twilio', name: 'Twilio' },
-      { slug: 'authy', name: 'Authy' },
-      { slug: 'cmsms', name: 'CMSMS' },
-      { slug: 'sms-broadcast', name: 'SMSbroadcast' },
-      { slug: '46elks', name: '46Elks' },
-      { slug: 'sipgate', name: 'Sipgate' },
-      { slug: 'all-my-sms', name: 'AllMySms' },
+      {
+        slug: 'clickatell', name: 'Clickatell',
+        maintainers: ['etiennemarais'],
+      },
+      {
+        slug: 'jusibe', name: 'Jusibe',
+        maintainers: ['atymic', 'unicodeveloper'],
+      },
+      {
+        slug: 'messagebird', name: 'Messagebird',
+        maintainers: ['petericebear'],
+      },
+      {
+        slug: 'plivo', name: 'Plivo',
+        maintainers: ['koomai'],
+      },
+      {
+        slug: 'smsc-ru', name: 'Smsc.ru',
+        maintainers: ['jhaoda'],
+      },
+      {
+        slug: 'twilio', name: 'Twilio',
+        maintainers: ['gregoriohc', 'fwartner'],
+      },
+      {
+        slug: 'authy', name: 'Authy',
+        maintainers: ['Omranic'],
+      },
+      {
+        slug: 'cmsms', name: 'CMSMS',
+        maintainers: ['mbardelmeijer'],
+      },
+      {
+        slug: 'sms-broadcast', name: 'SMSbroadcast',
+        maintainers: ['atymic'],
+      },
+      {
+        slug: '46elks', name: '46Elks',
+        maintainers: ['larsemil'],
+      },
+      {
+        slug: 'sipgate', name: 'Sipgate',
+        maintainers: ['simonkub'],
+      },
+      {
+        slug: 'all-my-sms', name: 'AllMySms',
+        maintainers: ['mikaelpopowicz'],
+      },
     ],
   },
   {
     name: 'To-do Lists', channels: [
-      { slug: 'trello', name: 'Trello' },
+      {
+        slug: 'trello', name: 'Trello',
+        maintainers: ['atymic'],
+      },
     ],
   },
   {
     name: 'Misc', channels: [
-      { slug: 'lob', name: 'Lob Physical Mail' },
-      { slug: 'webhook', name: 'Webhook' },
+      {
+        slug: 'lob', name: 'Lob Physical Mail',
+        maintainers: ['atymic'],
+      },
+      {
+        slug: 'webhook', name: 'Webhook',
+        maintainers: ['atymic'],
+      },
     ],
   },
   {
