@@ -33,7 +33,6 @@ module.exports = [
       { slug: 'clickatell', name: 'Clickatell' },
       { slug: 'jusibe', name: 'Jusibe' },
       { slug: 'messagebird', name: 'Messagebird' },
-      { slug: 'ovh-sms', name: 'OVH SMS' },
       { slug: 'plivo', name: 'Plivo' },
       { slug: 'smsc-ru', name: 'Smsc.ru' },
       { slug: 'twilio', name: 'Twilio' },
