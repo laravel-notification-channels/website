@@ -66,7 +66,7 @@ module.exports = {
 
         let content = res.data;
 
-        content = `<GithubButton slug="${channel.slug}"></GithubButton>\n` + content
+        content = `<ChannelHeader slug="${channel.slug}" :maintainers='${JSON.stringify(channel.maintainers)}'></ChannelHeader>\n` + content
 
         if (channel.deprecated) {
           content = `::: danger
