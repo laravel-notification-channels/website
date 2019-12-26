@@ -129,6 +129,10 @@ module.exports = [
         slug: 'all-my-sms', name: 'AllMySms',
         maintainers: ['mikaelpopowicz'],
       },
+      {
+        slug: 'smspoh', name: 'Smspoh',
+        maintainers: ['tintnaingwinn'],
+      },
     ],
   },
   {
