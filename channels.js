@@ -65,6 +65,10 @@ module.exports = [
         slug: 'telegram', name: 'Telegram',
         maintainers: ['irazasyed'],
       },
+      {
+        slug: 'workplace', name: 'Facebook Workplace',
+        maintainers: ['ghunti'],
+      },
     ],
   },
   {
