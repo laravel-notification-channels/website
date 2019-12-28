@@ -7,12 +7,13 @@ Our site is built with [Vuepress](https://vuepress.vuejs.org/).
 
 ```bash
 yarn dev # Run developmnent server
-yarn built # Build the static site
+yarn build # Build the static site
 ```
 
 ## Adding new Channels
 
 Open `channels.js` and add your channel to the correct category. The slug should be set as the github repository name.
+`maintainers` is a list of github usernames that maintain the channel (they appear in the header of the channel page on the website)
 
 This will add the channel to the sidebar, and pull in the `README.md` from the repository during the build. 
 
@@ -20,9 +21,14 @@ This will add the channel to the sidebar, and pull in the `README.md` from the r
 ...
 
 name: 'Support', channels: [
-      { slug: 'pagerduty', name: 'Pagerduty' },
-      { slug: 'intercom', name: 'Intercom' },
-      { slug: 'new-channel', name: 'My New Channel' },
+      {
+        slug: 'pagerduty', name: 'Pagerduty',
+        maintainers: ['atymic'],
+      },
+      {
+        slug: 'intercom', name: 'Intercom',
+        maintainers: ['ftw-soft'],
+      },
     ],
 
 ...
