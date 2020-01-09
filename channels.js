@@ -154,6 +154,10 @@ module.exports = [
         maintainers: ['atymic'],
       },
       {
+        slug: 'interfax', name: 'InterFAX',
+        maintainers: ['ivinteractive'],
+      },
+      {
         slug: 'webhook', name: 'Webhook',
         maintainers: ['atymic'],
       },
