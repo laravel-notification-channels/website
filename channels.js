@@ -158,6 +158,10 @@ module.exports = [
         maintainers: ['ivinteractive'],
       },
       {
+        slug: 'aws-sns', name: 'AWS SNS',
+        maintainers: ['claudsonm'],
+      },
+      {
         slug: 'webhook', name: 'Webhook',
         maintainers: ['atymic'],
       },
