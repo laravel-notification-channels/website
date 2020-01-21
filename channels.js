@@ -137,6 +137,10 @@ module.exports = [
         slug: 'smspoh', name: 'Smspoh',
         maintainers: ['tintnaingwinn'],
       },
+      {
+        slug: 'turbosms', name: 'TurboSMS',
+        maintainers: ['gvital3230'],
+      },
     ],
   },
   {
