@@ -2,8 +2,12 @@ module.exports = [
   {
     name: 'Push / Webpush', channels: [
       {
-        slug: 'apn', name: 'APN',
+        slug: 'apn', name: 'Apple Push (APN)',
         maintainers: ['barryvdh', 'dwightwatson'],
+      },
+      {
+        slug: 'fcm', name: 'Firebase Cloud Messaging (FCM)',
+        maintainers: ['chrisbjr'],
       },
       {
         slug: 'onesignal', name: 'OneSignal',
