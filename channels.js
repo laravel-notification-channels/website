@@ -73,6 +73,10 @@ module.exports = [
         slug: 'workplace', name: 'Facebook Workplace',
         maintainers: ['ghunti'],
       },
+      {
+        slug: 'rocket-chat', name: 'Rocket Chat',
+        maintainers: ['antonkomarev', 'FunfareNico'],
+      },
     ],
   },
   {
