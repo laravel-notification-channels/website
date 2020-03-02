@@ -149,6 +149,10 @@ module.exports = [
         slug: 'turbosms', name: 'TurboSMS',
         maintainers: ['gvital3230'],
       },
+      {
+        slug: 'vodafone', name: 'Vodafone',
+        maintainers: ['Human018'],
+      },
     ],
   },
   {
