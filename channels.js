@@ -153,6 +153,10 @@ module.exports = [
         slug: 'vodafone', name: 'Vodafone',
         maintainers: ['Human018'],
       },
+      {
+        slug: 'africastalking', name: 'AfricasTalking',
+        maintainers: ["ossycodes"]
+      },
     ],
   },
   {
