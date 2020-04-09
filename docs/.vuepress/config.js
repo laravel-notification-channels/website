@@ -12,7 +12,7 @@ const generatedSidebar = categories.map(cat => {
 
 module.exports = {
   title: 'Laravel Notification Channels',
-  description: 'A collection of custom drivers for Laravel 5.5+ & 6.0+',
+  description: 'A collection of custom drivers for Laravel 5.5+, 6.x & 7.x',
   dest: './dist',
 
   themeConfig: {
