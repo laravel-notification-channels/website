@@ -157,6 +157,10 @@ module.exports = [
         slug: 'africastalking', name: 'AfricasTalking',
         maintainers: ["ossycodes"]
       },
+      {
+        slug: 'sms77', name: 'SMS77',
+        maintainers: ["mxschll"]
+      },
     ],
   },
   {
