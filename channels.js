@@ -42,20 +42,16 @@ module.exports = [
   {
     name: 'Messenger / Chat / Social', channels: [
       {
-        slug: 'bearychat', name: 'BearyChat',
-        maintainers: ['ElfSundae'],
-      },
-      {
         slug: 'discord', name: 'Discord',
         maintainers: ['codyphobe', 'arcdigital'],
       },
       {
-        slug: 'facebook', name: 'Facebook',
-        maintainers: ['irazasyed'],
+        slug: 'workplace', name: 'Facebook Workplace',
+        maintainers: ['ghunti'],
       },
       {
-        slug: 'facebook-poster', name: 'Facebook Page Poster',
-        maintainers: ['dwightwatson'],
+        slug: 'microsoft-teams', name: 'Microsoft Teams',
+        maintainers: ['Tob0t'],
       },
       {
         slug: 'gitter', name: 'Gitter',
@@ -70,8 +66,16 @@ module.exports = [
         maintainers: ['irazasyed'],
       },
       {
-        slug: 'workplace', name: 'Facebook Workplace',
-        maintainers: ['ghunti'],
+        slug: 'bearychat', name: 'BearyChat',
+        maintainers: ['ElfSundae'],
+      },
+      {
+        slug: 'facebook', name: 'Facebook',
+        maintainers: ['irazasyed'],
+      },
+      {
+        slug: 'facebook-poster', name: 'Facebook Page Poster',
+        maintainers: ['dwightwatson'],
       },
       {
         slug: 'rocket-chat', name: 'Rocket Chat',
