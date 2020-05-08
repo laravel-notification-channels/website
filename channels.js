@@ -164,6 +164,10 @@ module.exports = [
       {
         slug: 'sms77', name: 'SMS77',
         maintainers: ["mxschll"]
+      },      
+      {
+        slug: 'smsapi', name: 'SMSAPI',
+        maintainers: ["atymic"]
       },
     ],
   },
