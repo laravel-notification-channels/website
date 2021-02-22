@@ -98,6 +98,10 @@ module.exports = [
   {
     name: 'SMS / Voip', channels: [
       {
+        slug: 'touch-sms', name: 'TouchSMS',
+        maintainers: ['atymic'],
+      },
+      {
         slug: 'clickatell', name: 'Clickatell',
         maintainers: ['etiennemarais'],
       },
@@ -130,10 +134,6 @@ module.exports = [
         maintainers: ['mbardelmeijer'],
       },
       {
-        slug: 'sms-broadcast', name: 'SMSbroadcast',
-        maintainers: ['atymic'],
-      },
-      {
         slug: '46elks', name: '46Elks',
         maintainers: ['larsemil'],
       },
@@ -164,10 +164,14 @@ module.exports = [
       {
         slug: 'sms77', name: 'SMS77',
         maintainers: ["mxschll"]
-      },      
+      },
       {
         slug: 'smsapi', name: 'SMSAPI',
         maintainers: ["atymic"]
+      },
+      {
+        slug: 'sms-broadcast', name: 'SMSbroadcast',
+        maintainers: ['atymic'],
       },
     ],
   },
