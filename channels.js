@@ -54,6 +54,10 @@ module.exports = [
         maintainers: ['Tob0t'],
       },
       {
+        slug: 'google-chat', name: 'Google Chat',
+        maintainers: ['frankieeedeee'],
+      },
+      {
         slug: 'gitter', name: 'Gitter',
         maintainers: ['jhaoda'],
       },
