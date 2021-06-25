@@ -66,6 +66,8 @@ module.exports = {
 
         let content = res.data;
 
+        content = content.replace(/\](?!.*(http|#))\(/g,`](https://github.com/laravel-notification-channels/${channel.slug}/blob/master/`)
+
         content = `<ChannelHeader slug="${channel.slug}" :maintainers='${JSON.stringify(channel.maintainers)}'></ChannelHeader>\n` + content
 
         if (channel.deprecated) {
