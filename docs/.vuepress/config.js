@@ -50,6 +50,7 @@ module.exports = {
     categories.map(cat => {
       cat.channels.map(c => {
         if (cat.name === 'Deprecated') c.deprecated = true;
+        if (cat.name === 'SMS / Voip') c.sms = true;
         allChannels.push(c)
       })
     })
@@ -57,7 +58,7 @@ module.exports = {
     const axios = require('axios')
     const { mapLimit } = require('async')
 
-    return await mapLimit(allChannels, 3, async (channel) => {
+    return mapLimit(allChannels, 3, async (channel) => {
       if (!global['REPO_CACHE']) global['REPO_CACHE'] = {};
 
       if (!global['REPO_CACHE'][channel.slug]) {
@@ -66,13 +67,19 @@ module.exports = {
 
         let content = res.data;
 
-        content = content.replace(/\](?!.*(http|#))\(/g,`](https://github.com/laravel-notification-channels/${channel.slug}/blob/master/`)
+        content = content.replace(/\](?!.*(http|#))\(/g, `](https://github.com/laravel-notification-channels/${channel.slug}/blob/master/`)
 
         content = `<ChannelHeader slug="${channel.slug}" :maintainers='${JSON.stringify(channel.maintainers)}'></ChannelHeader>\n` + content
 
         if (channel.deprecated) {
           content = `::: danger
 This channel is deprecated. Please see the [GitHub Repo](https://github.com/laravel-notification-channels/${channel.slug}) for more information
+:::\n` + content
+        }
+
+        if (channel.sms) {
+          content = `::: tip
+Looking for an SMS provider? Check out [CompareSMS](https://comparesms.com.au) and find the best SMS provider for you
 :::\n` + content
         }
 
