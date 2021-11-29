@@ -38,7 +38,7 @@ name: 'Support', channels: [
 ## Deploying
 This website is deployed automatically using [Netlify](https://app.netlify.com).
    
-Branch previews are build for each PR.
+The website is built on each commit and automatically once per day to pull in updates from the provider repos.
 
 ## Contribution
 
