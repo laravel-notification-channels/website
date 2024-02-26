@@ -85,6 +85,10 @@ module.exports = [
         slug: 'rocket-chat', name: 'Rocket Chat',
         maintainers: ['antonkomarev', 'FunfareNico'],
       },
+      {
+        slug: 'webex', name: 'Webex',
+        maintainers: ['askmrsinh'],
+      },
     ],
   },
   {
