@@ -6,6 +6,10 @@ module.exports = [
         maintainers: ['barryvdh', 'dwightwatson'],
       },
       {
+        slug: 'expo', name: 'Expo',
+        maintainers: ['mabdullahsari', 'dwightwatson'],
+      },
+      {
         slug: 'fcm', name: 'Firebase Cloud Messaging (FCM)',
         maintainers: ['chrisbjr'],
       },
