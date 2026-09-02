@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://laravel-notification-channels.com/sitemap.xml

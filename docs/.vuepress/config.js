@@ -1,4 +1,7 @@
 const categories = require('../../channels')
+const { blogPages, applyBlogLastUpdated, sitemapDateFormatter } = require('./lib/blog')
+
+const HOSTNAME = process.env.SITE_HOSTNAME || 'https://laravel-notification-channels.com'
 
 const generatedSidebar = categories.map(cat => {
   return {
@@ -9,6 +12,17 @@ const generatedSidebar = categories.map(cat => {
     }),
   }
 })
+
+const docsSidebar = [
+  {
+    title: 'Documentation',
+    collapsable: false,
+    children: [
+      ['/about', 'About / FAQ'],
+      ['/backport', 'Using on Laravel 5.1 / 5.2'],
+    ]
+  }
+].concat(generatedSidebar)
 
 module.exports = {
   title: 'Laravel Notification Channels',
@@ -24,6 +38,7 @@ module.exports = {
     sidebarDepth: 1,
     nav: [
       { text: 'About / FAQ', link: '/about' },
+      { text: 'Blog', link: '/blog/' },
       {
         text: 'Github',
         link: 'https://github.com/laravel-notification-channels',
@@ -33,17 +48,15 @@ module.exports = {
         link: 'https://packagist.org/packages/laravel-notification-channels/',
       },
     ],
-    sidebar: [
-      {
-        title: 'Documentation',
-        collapsable: false,
-        children: [
-          ['/about', 'About / FAQ'],
-          ['/backport', 'Using on Laravel 5.1 / 5.2'],
-        ]
-      }
-    ].concat(generatedSidebar),
+    sidebar: {
+      '/blog/': [],
+      '/': docsSidebar,
+    },
   },
+  extendPageData ($page) {
+    applyBlogLastUpdated($page)
+  },
+
   async additionalPages () {
     let allChannels = []
 
@@ -58,7 +71,7 @@ module.exports = {
     const axios = require('axios')
     const { mapLimit } = require('async')
 
-    return mapLimit(allChannels, 3, async (channel) => {
+    const channelPages = await mapLimit(allChannels, 3, async (channel) => {
       if (!global['REPO_CACHE']) global['REPO_CACHE'] = {};
 
       if (!global['REPO_CACHE'][channel.slug]) {
@@ -91,11 +104,16 @@ Looking for an SMS provider? Check out [CompareSMS](https://comparesms.com.au) a
 
       return global['REPO_CACHE'][channel.slug]
     })
+
+    const blog = await blogPages()
+    module.exports.themeConfig.sidebar['/blog/'] = blog.sidebar
+
+    return channelPages.concat(blog.pages)
   },
   head: [
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-icon-180x180.png' }],
-    ['link', { rel: 'icon" type="image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
-    ['link', { rel: 'icon" type="image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
     ['style', {}, 'img + .icon.outbound {display: none;}']
   ],
@@ -107,6 +125,14 @@ Looking for an SMS provider? Check out [CompareSMS](https://comparesms.com.au) a
       '@vuepress/google-analytics',
       {
         'ga': 'UA-150688103-1'
+      }
+    ],
+    [
+      'sitemap',
+      {
+        hostname: HOSTNAME,
+        exclude: ['/404.html'],
+        dateFormatter: sitemapDateFormatter,
       }
     ]
   ]
